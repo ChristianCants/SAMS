@@ -1,0 +1,66 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:is(.dark *));
+@theme {
+  --color-sidebar: #1a2744;
+  --color-nav-active: #2d3f6b;
+  --color-primary: #3b5bdb;
+  --color-success: #40c057;
+  --color-warning: #fd7e14;
+  --color-danger: #fa5252;
+  --color-purple: #7950f2;
+  --color-background: #f4f6f9;
+  --color-card: #ffffff;
+}
+
+@layer base {
+  :root {
+    --background: var(--color-background);
+    --foreground: #0f172a;
+    --card: var(--color-card);
+    --card-foreground: #0f172a;
+    --primary: var(--color-primary);
+    --primary-foreground: #ffffff;
+    --muted: #f1f5f9;
+    --muted-foreground: #64748b;
+    --border: #e2e8f0;
+  }
+}
+
+@layer base {
+  * {
+    border-color: var(--border);
+  }
+  body {
+    background-color: var(--background);
+    color: var(--foreground);
+    font-family: 'Inter', system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    /* Animated Mesh Gradient for Glass Effect */
+    background: linear-gradient(120deg, #e0f2fe 0%, #dcfce7 40%, #f3e8ff 80%, #f1f5f9 100%);
+    background-size: 300% 300%;
+    animation: gradientBG 15s ease infinite;
+    min-height: 100vh;
+  }
+}
+
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@layer utilities {
+  .glass-panel {
+    @apply bg-white/60 backdrop-blur-xl border border-white/50 shadow-[0_8px_32px_rgba(0,0,0,0.04)];
+  }
+  .glass-card {
+    @apply bg-white/70 backdrop-blur-lg border border-white/60 shadow-[0_4px_24px_rgba(0,0,0,0.03)] hover:shadow-[0_8px_32px_rgba(16,185,129,0.1)] transition-all;
+  }
+  .glass-sidebar {
+    @apply bg-[#1a2744]/70 backdrop-blur-2xl border-r border-white/10;
+  }
+  .glass-header {
+    @apply bg-white/40 backdrop-blur-xl border-b border-white/30;
+  }
+}
