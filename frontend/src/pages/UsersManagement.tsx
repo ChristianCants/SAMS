@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Search, Filter, Plus, Edit2, Trash2, Mail, BookOpen, Upload, Download } from "lucide-react";
+import { Search, Filter, Plus, Edit2, Trash2, Mail, Upload } from "lucide-react";
 import PageTransition from "../components/layout/PageTransition";
 import { Card, CardContent } from "../components/ui/Card";
 import DataImporter from "../components/ui/DataImporter";

@@ -1,5 +1,5 @@
-import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Legend, LineChart, Line } from 'recharts';
-import { Download, FileText, Filter } from 'lucide-react';
+import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, LineChart, Line } from 'recharts';
+import { Download, FileText } from 'lucide-react';
 import PageTransition from "../components/layout/PageTransition";
 import { Card, CardContent } from "../components/ui/Card";
 import AnimatedCounter from "../components/ui/AnimatedCounter";

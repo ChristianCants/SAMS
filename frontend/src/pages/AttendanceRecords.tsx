@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Search, Filter, Download, Edit2, Calendar } from "lucide-react";
+import { Search, Download, Edit2, Calendar } from "lucide-react";
 import PageTransition from "../components/layout/PageTransition";
 import { Card, CardContent } from "../components/ui/Card";
 

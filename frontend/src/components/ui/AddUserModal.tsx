@@ -24,7 +24,7 @@ export default function AddUserModal({ onClose, onSuccess }: AddUserModalProps) 
       // Create user via Supabase Auth
       // Note: If email confirmation is off, this might modify the current session.
       // A more robust implementation would use a backend Edge Function.
-      const { data, error: authError } = await supabase.auth.signUp({
+      const { error: authError } = await supabase.auth.signUp({
         email,
         password,
         options: {

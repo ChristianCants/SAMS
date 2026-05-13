@@ -1,4 +1,4 @@
-import { Users, BookOpen, Clock, Calendar, ChevronLeft, ChevronRight, UserCheck } from "lucide-react";
+import { Users, BookOpen, Clock, ChevronLeft, ChevronRight } from "lucide-react";
 import { useNavigate, useLocation } from "react-router-dom";
 import PageTransition from "../components/layout/PageTransition";
 import AnimatedCounter from "../components/ui/AnimatedCounter";
