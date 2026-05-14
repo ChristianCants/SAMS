@@ -4,11 +4,11 @@ import PageTransition from "../components/layout/PageTransition";
 import { Card, CardContent } from "../components/ui/Card";
 
 const recordsData = [
-  { id: 1, name: "Alexander Smith", stuId: "STU-001", date: "2026-05-11", status: "present", recordedBy: "Teacher Sarah" },
-  { id: 2, name: "Isabella Johnson", stuId: "STU-002", date: "2026-05-11", status: "present", recordedBy: "Teacher Sarah" },
-  { id: 3, name: "William Williams", stuId: "STU-003", date: "2026-05-11", status: "absent", recordedBy: "Teacher Sarah" },
-  { id: 4, name: "Sophia Brown", stuId: "STU-004", date: "2026-05-11", status: "late", recordedBy: "Teacher Sarah" },
-  { id: 5, name: "James Jones", stuId: "STU-005", date: "2026-05-11", status: "present", recordedBy: "Teacher Sarah" },
+  { id: 1, name: "Ashley Fe G. Espinosa", stuId: "23-6503-956", date: "2026-05-14", status: "present", recordedBy: "Mariza O. Jortil" },
+  { id: 2, name: "Cazandra Jean R. Aniban", stuId: "17-0373-610", date: "2026-05-14", status: "present", recordedBy: "Mariza O. Jortil" },
+  { id: 3, name: "Christine Baejay E. Gran", stuId: "23-4555-758", date: "2026-05-14", status: "absent", recordedBy: "Mariza O. Jortil" },
+  { id: 4, name: "Christine Jane N. Abendan", stuId: "22-0423-182", date: "2026-05-14", status: "late", recordedBy: "Mariza O. Jortil" },
+  { id: 5, name: "Dorain P. Conejos", stuId: "23-4775-212", date: "2026-05-14", status: "present", recordedBy: "Mariza O. Jortil" },
 ];
 
 export default function AttendanceRecords() {

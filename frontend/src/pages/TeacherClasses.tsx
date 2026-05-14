@@ -47,8 +47,30 @@ export default function TeacherClasses() {
     }
 
     const { data, error } = await query;
-    if (!error && data) {
+    if (!error && data && data.length > 0) {
       setClasses(data);
+    } else {
+      // Fallback Mock Data for Faculty Mariza O. Jortil
+      setClasses([
+        {
+          id: "mock-1",
+          name: "OM334 Project Management",
+          subject: "Project Management",
+          schedule_time: "B1 M/TH 9:00AM - 10:30AM",
+          room: "Room 301",
+          color_theme: "bg-[#10b981]",
+          teacher: { full_name: "Mariza O. Jortil" }
+        },
+        {
+          id: "mock-2",
+          name: "OM334 Project Management",
+          subject: "Project Management",
+          schedule_time: "B4 T/F 9:00AM - 10:30AM",
+          room: "Room 302",
+          color_theme: "bg-[#3b82f6]",
+          teacher: { full_name: "Mariza O. Jortil" }
+        }
+      ]);
     }
     setIsLoading(false);
   };

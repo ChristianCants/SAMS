@@ -4,11 +4,11 @@ import { Card, CardContent } from "../components/ui/Card";
 import AnimatedCounter from "../components/ui/AnimatedCounter";
 
 const activities = [
-  { id: 1, title: "Mid-term Project", subject: "Science", dueDate: "May 15, 2026", status: "graded", score: 92, maxScore: 100 },
-  { id: 2, title: "Chapter 4 Quiz", subject: "Math", dueDate: "May 10, 2026", status: "graded", score: 88, maxScore: 100 },
-  { id: 3, title: "Lab Report 3", subject: "Science", dueDate: "May 18, 2026", status: "submitted", score: null, maxScore: 50 },
-  { id: 4, title: "World History Essay", subject: "History", dueDate: "May 20, 2026", status: "pending", score: null, maxScore: 100 },
-  { id: 5, title: "Literature Review", subject: "English", dueDate: "May 12, 2026", status: "late", score: null, maxScore: 50 },
+  { id: 1, title: "Project Charter", subject: "Project Management", dueDate: "May 15, 2026", status: "graded", score: 92, maxScore: 100 },
+  { id: 2, title: "Risk Management Quiz", subject: "Project Management", dueDate: "May 10, 2026", status: "graded", score: 88, maxScore: 100 },
+  { id: 3, title: "Gantt Chart Draft", subject: "Project Management", dueDate: "May 18, 2026", status: "submitted", score: null, maxScore: 50 },
+  { id: 4, title: "Agile Case Study", subject: "Project Management", dueDate: "May 20, 2026", status: "pending", score: null, maxScore: 100 },
+  { id: 5, title: "Stakeholder Analysis", subject: "Project Management", dueDate: "May 12, 2026", status: "late", score: null, maxScore: 50 },
 ];
 
 export default function StudentActivities() {
@@ -70,8 +70,7 @@ export default function StudentActivities() {
             <div className="flex gap-2">
               <select className="text-sm border-white/40 rounded-md px-2 py-1 bg-white/40 outline-none backdrop-blur-sm">
                 <option>All Subjects</option>
-                <option>Math</option>
-                <option>Science</option>
+                <option>Project Management</option>
               </select>
             </div>
           </div>
@@ -137,9 +136,9 @@ export default function StudentActivities() {
               <h3 className="font-semibold text-gray-800 mb-4">Latest Feedback</h3>
               <div className="space-y-4">
                 <div className="p-4 bg-[#10b981]/10 rounded-xl border border-[#10b981]/20">
-                  <h4 className="text-sm font-semibold text-gray-900">Mid-term Project (Science)</h4>
-                  <p className="text-sm text-gray-600 mt-2 italic">"Excellent work on the hypothesis section. The data visualization was very clear. Keep it up!"</p>
-                  <p className="text-xs font-medium text-primary mt-3">- Mr. Smith</p>
+                  <h4 className="text-sm font-semibold text-gray-900">Project Charter (Project Management)</h4>
+                  <p className="text-sm text-gray-600 mt-2 italic">"Excellent work on the scope definition. The resource allocation was very clear. Keep it up!"</p>
+                  <p className="text-xs font-medium text-primary mt-3">- Mariza O. Jortil</p>
                 </div>
               </div>
             </CardContent>
@@ -155,8 +154,8 @@ export default function StudentActivities() {
                     <span className="text-lg font-bold leading-none">20</span>
                   </div>
                   <div>
-                    <h4 className="text-sm font-semibold text-gray-900">World History Essay</h4>
-                    <p className="text-xs text-gray-500 mt-0.5">History • 11:59 PM</p>
+                    <h4 className="text-sm font-semibold text-gray-900">Agile Case Study</h4>
+                    <p className="text-xs text-gray-500 mt-0.5">Project Management • 11:59 PM</p>
                   </div>
                 </div>
               </div>

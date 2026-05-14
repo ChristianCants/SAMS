@@ -3,14 +3,33 @@ import { Search, CheckCircle2, XCircle, Clock, Calendar as CalendarIcon, Users a
 import PageTransition from "../components/layout/PageTransition";
 import { Card, CardContent } from "../components/ui/Card";
 
-const studentsData = [
-  { id: "STU-001", name: "Alexander Smith", status: "present" },
-  { id: "STU-002", name: "Isabella Johnson", status: "present" },
-  { id: "STU-003", name: "William Williams", status: "absent" },
-  { id: "STU-004", name: "Sophia Brown", status: "late" },
-  { id: "STU-005", name: "James Jones", status: "present" },
-  { id: "STU-006", name: "Charlotte Garcia", status: null },
-  { id: "STU-007", name: "Benjamin Martinez", status: null },
+type StudentData = {
+  id: string;
+  name: string;
+  status: string | null;
+};
+
+const studentsData: StudentData[] = [
+  { id: "23-6503-956", name: "Ashley Fe G. Espinosa", status: null },
+  { id: "17-0373-610", name: "Cazandra Jean R. Aniban", status: null },
+  { id: "23-4555-758", name: "Christine Baejay E. Gran", status: null },
+  { id: "22-0423-182", name: "Christine Jane N. Abendan", status: null },
+  { id: "23-4775-212", name: "Dorain P. Conejos", status: null },
+  { id: "20-1526-959", name: "Hamryzeline T. Arain", status: null },
+  { id: "23-4784-965", name: "Jessa D. Ramirez", status: null },
+  { id: "22-1479-168", name: "Jhasmine D. Donque", status: null },
+  { id: "23-0497-451", name: "Joneo Nemenzo", status: null },
+  { id: "23-5740-920", name: "Juvilyn B. Egdamin", status: null },
+  { id: "19-0995-249", name: "Krystal Kyeth A. Navarro", status: null },
+  { id: "22-2164-817", name: "Lealyn S. Miranda", status: null },
+  { id: "21-5229-275", name: "Leregie A. Leoligao", status: null },
+  { id: "23-1352-887", name: "Lesley Rebecca C. Armian", status: null },
+  { id: "17-1205-489", name: "Mae Joy Batusin", status: null },
+  { id: "23-0058-141", name: "Mareyth E. Muñez", status: null },
+  { id: "22-4369-993", name: "Mary Claire R. Enoc", status: null },
+  { id: "22-3534-793", name: "Mitch Kyla G. Laspuña", status: null },
+  { id: "22-3762-613", name: "Sai Corrine M. Piañar", status: null },
+  { id: "22-0593-773", name: "Venus B. Albaran", status: null },
 ];
 
 export default function TakeAttendance() {
@@ -47,16 +66,14 @@ export default function TakeAttendance() {
             <div className="space-y-1">
               <label className="text-sm font-medium text-gray-700">Class</label>
               <select className="block w-48 px-3 py-2 bg-white/40 border border-white/40 rounded-lg text-sm focus:ring-2 focus:ring-[#10b981]/40 outline-none backdrop-blur-sm">
-                <option>Grade 10 - Science</option>
-                <option>Grade 10 - Arts</option>
-                <option>Grade 11 - Math</option>
+                <option>OM334 Project Management</option>
               </select>
             </div>
             <div className="space-y-1">
               <label className="text-sm font-medium text-gray-700">Section</label>
               <select className="block w-40 px-3 py-2 bg-white/40 border border-white/40 rounded-lg text-sm focus:ring-2 focus:ring-[#10b981]/40 outline-none backdrop-blur-sm">
-                <option>Section A</option>
-                <option>Section B</option>
+                <option>B1 M/TH</option>
+                <option>B4 T/F</option>
               </select>
             </div>
             <div className="space-y-1">
@@ -83,7 +100,7 @@ export default function TakeAttendance() {
       {/* Student List */}
       <Card className="overflow-hidden">
         <div className="p-4 border-b border-white/30 flex justify-between items-center bg-white/20 backdrop-blur-sm">
-          <h2 className="font-semibold text-gray-800">Student Roster (7)</h2>
+          <h2 className="font-semibold text-gray-800">Student Roster (20)</h2>
           <div className="relative">
             <Search size={16} className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400" />
             <input 

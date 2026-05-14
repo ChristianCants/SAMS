@@ -5,11 +5,26 @@ import { Card, CardContent } from "../components/ui/Card";
 import DataImporter from "../components/ui/DataImporter";
 
 const studentsData = [
-  { id: "STU-001", name: "Alexander Smith", score: 85, status: "submitted" },
-  { id: "STU-002", name: "Isabella Johnson", score: 92, status: "submitted" },
-  { id: "STU-003", name: "William Williams", score: null, status: "pending" },
-  { id: "STU-004", name: "Sophia Brown", score: 78, status: "submitted" },
-  { id: "STU-005", name: "James Jones", score: null, status: "pending" },
+  { id: "23-6503-956", name: "Ashley Fe G. Espinosa", score: 92, status: "submitted" },
+  { id: "17-0373-610", name: "Cazandra Jean R. Aniban", score: 88, status: "submitted" },
+  { id: "23-4555-758", name: "Christine Baejay E. Gran", score: null, status: "pending" },
+  { id: "22-0423-182", name: "Christine Jane N. Abendan", score: 95, status: "submitted" },
+  { id: "23-4775-212", name: "Dorain P. Conejos", score: 85, status: "submitted" },
+  { id: "20-1526-959", name: "Hamryzeline T. Arain", score: null, status: "pending" },
+  { id: "23-4784-965", name: "Jessa D. Ramirez", score: 90, status: "submitted" },
+  { id: "22-1479-168", name: "Jhasmine D. Donque", score: 89, status: "submitted" },
+  { id: "23-0497-451", name: "Joneo Nemenzo", score: null, status: "pending" },
+  { id: "23-5740-920", name: "Juvilyn B. Egdamin", score: 94, status: "submitted" },
+  { id: "19-0995-249", name: "Krystal Kyeth A. Navarro", score: 87, status: "submitted" },
+  { id: "22-2164-817", name: "Lealyn S. Miranda", score: null, status: "pending" },
+  { id: "21-5229-275", name: "Leregie A. Leoligao", score: 82, status: "submitted" },
+  { id: "23-1352-887", name: "Lesley Rebecca C. Armian", score: 91, status: "submitted" },
+  { id: "17-1205-489", name: "Mae Joy Batusin", score: null, status: "pending" },
+  { id: "23-0058-141", name: "Mareyth E. Muñez", score: 86, status: "submitted" },
+  { id: "22-4369-993", name: "Mary Claire R. Enoc", score: 93, status: "submitted" },
+  { id: "22-3534-793", name: "Mitch Kyla G. Laspuña", score: 88, status: "submitted" },
+  { id: "22-3762-613", name: "Sai Corrine M. Piañar", score: null, status: "pending" },
+  { id: "22-0593-773", name: "Venus B. Albaran", score: 90, status: "submitted" },
 ];
 
 export default function TeacherGrading() {

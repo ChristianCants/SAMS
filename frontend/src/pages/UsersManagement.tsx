@@ -4,13 +4,23 @@ import PageTransition from "../components/layout/PageTransition";
 import { Card, CardContent } from "../components/ui/Card";
 import DataImporter from "../components/ui/DataImporter";
 import AddUserModal from "../components/ui/AddUserModal";
+import EditUserModal from "../components/ui/EditUserModal";
 import { supabase } from "../lib/supabase";
 
 export default function UsersManagement() {
   const [users, setUsers] = useState<any[]>([]);
   const [showImporter, setShowImporter] = useState(false);
   const [showAddUserModal, setShowAddUserModal] = useState(false);
+  const [editingUser, setEditingUser] = useState<any>(null);
   const [isLoading, setIsLoading] = useState(true);
+
+  const handleDelete = async (id: string) => {
+    if (window.confirm("Are you sure you want to remove this user from the system? Note: Full account deletion may require administrative database access.")) {
+      const { error } = await supabase.from('profiles').delete().eq('id', id);
+      if (!error) fetchUsers();
+      else alert("Error removing user: " + error.message);
+    }
+  };
 
   const fetchUsers = async () => {
     setIsLoading(true);
@@ -79,6 +89,17 @@ export default function UsersManagement() {
           onClose={() => setShowAddUserModal(false)}
           onSuccess={() => {
             setShowAddUserModal(false);
+            fetchUsers();
+          }}
+        />
+      )}
+
+      {editingUser && (
+        <EditUserModal 
+          user={editingUser}
+          onClose={() => setEditingUser(null)}
+          onSuccess={() => {
+            setEditingUser(null);
             fetchUsers();
           }}
         />
@@ -167,10 +188,18 @@ export default function UsersManagement() {
                     </td>
                     <td className="px-6 py-4 text-right">
                       <div className="flex items-center justify-end gap-2">
-                        <button className="p-1.5 text-gray-400 hover:text-blue-600 hover:bg-blue-50 rounded-md transition-colors" title="Edit User">
+                        <button 
+                          onClick={() => setEditingUser(user)}
+                          className="p-1.5 text-gray-400 hover:text-blue-600 hover:bg-blue-50 rounded-md transition-colors" 
+                          title="Edit User"
+                        >
                           <Edit2 size={16} />
                         </button>
-                        <button className="p-1.5 text-gray-400 hover:text-red-500 hover:bg-red-50 rounded-md transition-colors" title="Remove User">
+                        <button 
+                          onClick={() => handleDelete(user.id)}
+                          className="p-1.5 text-gray-400 hover:text-red-500 hover:bg-red-50 rounded-md transition-colors" 
+                          title="Remove User"
+                        >
                           <Trash2 size={16} />
                         </button>
                       </div>

@@ -6,28 +6,22 @@ import PageTransition from "../components/layout/PageTransition";
 import { supabase } from "../lib/supabase";
 
 const weeklyOverview = [
-  { name: 'Jan', value: 55, recurring: 100 },
-  { name: 'Feb', value: 80, recurring: 50 },
-  { name: 'Mar', value: 90, recurring: 60 },
-  { name: 'Apr', value: 95, recurring: 110 },
-  { name: 'May', value: 88, recurring: 40 },
-  { name: 'Jun', value: 65, recurring: 30 },
-  { name: 'Jul', value: 92, recurring: 120 },
-  { name: 'Aug', value: 85, recurring: 60 },
+  { name: 'Mon', value: 18, recurring: 2 },
+  { name: 'Tue', value: 19, recurring: 1 },
+  { name: 'Wed', value: 20, recurring: 0 },
+  { name: 'Thu', value: 17, recurring: 3 },
+  { name: 'Fri', value: 19, recurring: 1 },
 ];
 
 const attendanceSummaryData = [
-  { name: 'Present', value: 118, color: '#f59e0b' },
-  { name: 'Absent', value: 8, color: '#3b82f6' },
-  { name: 'Late', value: 2, color: '#ef4444' },
+  { name: 'Present', value: 18, color: '#f59e0b' },
+  { name: 'Absent', value: 1, color: '#3b82f6' },
+  { name: 'Late', value: 1, color: '#ef4444' },
 ];
 
 const classAttendanceData = [
-  { class: 'Grade 10 - Section A', present: 25, absent: 2, late: 1, percent: 88, color: "text-[#10b981]", earnings: "$4,795,200" },
-  { class: 'Grade 10 - Section B', present: 24, absent: 1, late: 0, percent: 96, color: "text-[#3b82f6]", earnings: "$4,156,800" },
-  { class: 'Grade 11 - Section A', present: 23, absent: 2, late: 0, percent: 92, color: "text-[#f59e0b]", earnings: "$559,200" },
-  { class: 'Grade 11 - Section B', present: 22, absent: 3, late: 1, percent: 85, color: "text-[#ef4444]", earnings: "$234,000" },
-  { class: 'Grade 12 - Section A', present: 24, absent: 0, late: 0, percent: 100, color: "text-[#8b5cf6]", earnings: "$199,000" },
+  { class: 'OM334 Project Management B1', present: 18, absent: 1, late: 1, percent: 90, color: "text-[#10b981]", earnings: "Mariza O. Jortil" },
+  { class: 'OM334 Project Management B4', present: 19, absent: 1, late: 0, percent: 95, color: "text-[#3b82f6]", earnings: "Mariza O. Jortil" },
 ];
 
 export default function AdminDashboard() {
@@ -199,7 +193,7 @@ export default function AdminDashboard() {
                 </div>
                 <div className="flex items-center gap-4">
                   <span className="text-gray-400 font-medium">{item.value}</span>
-                  <span className="font-bold text-gray-900 w-8 text-right">{Math.round((item.value / 128) * 100)}%</span>
+                  <span className="font-bold text-gray-900 w-8 text-right">{Math.round((item.value / 20) * 100)}%</span>
                 </div>
               </div>
             ))}
@@ -225,8 +219,8 @@ export default function AdminDashboard() {
             <ActivityItem 
               icon={<UserPlus size={16} className="text-[#3b82f6]" />} 
               iconBg="bg-[#3b82f6]/10"
-              title="Attendance for Grade 10 - Section A"
-              subtitle="Maria Santos • 10:30 AM"
+              title="Attendance for OM334 Project Management"
+              subtitle="Mariza O. Jortil • 10:30 AM"
               badge="New Record"
               badgeColor="text-[#3b82f6] bg-[#3b82f6]/10"
             />
@@ -234,7 +228,7 @@ export default function AdminDashboard() {
               icon={<Building2 size={16} className="text-[#ef4444]" />} 
               iconBg="bg-[#ef4444]/10"
               title="Low Attendance Alert"
-              subtitle="Grade 11 - Section B • 09:15 AM"
+              subtitle="OM334 B4 • 09:15 AM"
               badge="Low Count"
               badgeColor="text-[#ef4444] bg-[#ef4444]/10"
             />

@@ -5,18 +5,15 @@ import { Card, CardContent } from "../components/ui/Card";
 import AnimatedCounter from "../components/ui/AnimatedCounter";
 
 const barData = [
-  { name: 'Grade 10-A', attendance: 95 },
-  { name: 'Grade 10-B', attendance: 88 },
-  { name: 'Grade 11-Sci', attendance: 98 },
-  { name: 'Grade 11-Art', attendance: 85 },
-  { name: 'Grade 12-Sci', attendance: 92 },
+  { name: 'OM334 B1', attendance: 90 },
+  { name: 'OM334 B4', attendance: 95 },
 ];
 
 const lineData = [
   { name: 'Week 1', attendance: 91 },
   { name: 'Week 2', attendance: 94 },
   { name: 'Week 3', attendance: 92 },
-  { name: 'Week 4', attendance: 96 },
+  { name: 'Week 4', attendance: 93 },
 ];
 
 export default function AttendanceReports() {
@@ -27,9 +24,9 @@ export default function AttendanceReports() {
         <CardContent className="pt-6 flex flex-col sm:flex-row gap-4 justify-between items-center">
           <div className="flex flex-wrap gap-4 items-center">
             <select className="px-3 py-2 bg-gray-50 border border-gray-200 rounded-lg text-sm outline-none focus:ring-2 focus:ring-primary/20">
-              <option>All Grades</option>
-              <option>Grade 10</option>
-              <option>Grade 11</option>
+              <option>All Sections</option>
+              <option>Section B1 M/TH</option>
+              <option>Section B4 T/F</option>
             </select>
             <select className="px-3 py-2 bg-gray-50 border border-gray-200 rounded-lg text-sm outline-none focus:ring-2 focus:ring-primary/20">
               <option>Monthly Report</option>
@@ -57,7 +54,7 @@ export default function AttendanceReports() {
           <CardContent className="pt-6">
             <p className="text-sm font-medium text-gray-500 mb-2">Overall Attendance</p>
             <h3 className="text-4xl font-bold text-[#3b5bdb]">
-              <AnimatedCounter value={92.8} suffix="%" duration={1} />
+              <AnimatedCounter value={92.5} suffix="%" duration={1} />
             </h3>
           </CardContent>
         </Card>
@@ -65,15 +62,15 @@ export default function AttendanceReports() {
           <CardContent className="pt-6">
             <p className="text-sm font-medium text-gray-500 mb-2">Perfect Attendance (Students)</p>
             <h3 className="text-4xl font-bold text-[#40c057]">
-              <AnimatedCounter value={420} duration={1} />
+              <AnimatedCounter value={15} duration={1} />
             </h3>
           </CardContent>
         </Card>
         <Card className="text-center group hover:border-[#fa5252]/30 transition-all">
           <CardContent className="pt-6">
-            <p className="text-sm font-medium text-gray-500 mb-2">Most Absent Class</p>
-            <h3 className="text-2xl font-bold text-[#fa5252] mt-2">Grade 11-Art</h3>
-            <p className="text-xs text-gray-400 mt-1">85% average</p>
+            <p className="text-sm font-medium text-gray-500 mb-2">Most Absent Section</p>
+            <h3 className="text-2xl font-bold text-[#fa5252] mt-2">OM334 B1</h3>
+            <p className="text-xs text-gray-400 mt-1">90% average</p>
           </CardContent>
         </Card>
       </div>

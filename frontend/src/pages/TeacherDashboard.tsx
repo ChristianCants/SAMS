@@ -4,9 +4,8 @@ import PageTransition from "../components/layout/PageTransition";
 import AnimatedCounter from "../components/ui/AnimatedCounter";
 
 const todayClasses = [
-  { time: "08:00 AM", name: "Grade 10 - Science", status: "completed", attendance: 38, total: 40 },
-  { time: "10:30 AM", name: "Grade 11 - Math", status: "in-progress", attendance: 35, total: 35 },
-  { time: "01:00 PM", name: "Grade 12 - Physics", status: "upcoming", attendance: 0, total: 32 },
+  { time: "09:00 AM", name: "OM334 Project Management (B1 M/TH)", status: "completed", attendance: 18, total: 20 },
+  { time: "09:00 AM", name: "OM334 Project Management (B4 T/F)", status: "upcoming", attendance: 0, total: 20 },
 ];
 
 export default function TeacherDashboard() {
@@ -47,7 +46,7 @@ export default function TeacherDashboard() {
         
         {/* Header & Tabs */}
         <div>
-          <h1 className="text-gray-500 text-sm font-medium mb-4">Welcome back, Sarah! Here is your daily overview.</h1>
+          <h1 className="text-gray-500 text-sm font-medium mb-4">Welcome back, Mariza O. Jortil! Here is your daily overview.</h1>
           <div className="flex items-center gap-6 border-b border-gray-200">
             {tabs.map((tab, idx) => {
               const isActive = location.pathname === tab.path;

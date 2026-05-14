@@ -6,16 +6,16 @@ import AnimatedCounter from "../components/ui/AnimatedCounter";
 import { supabase } from "../lib/supabase";
 
 const recentAttendance = [
-  { date: "May 10, 2026", status: "Present", timeIn: "07:45 AM" },
-  { date: "May 09, 2026", status: "Present", timeIn: "07:50 AM" },
-  { date: "May 08, 2026", status: "Late", timeIn: "08:15 AM" },
-  { date: "May 07, 2026", status: "Absent", timeIn: "--" },
+  { date: "May 14, 2026", status: "Present", timeIn: "08:50 AM" },
+  { date: "May 11, 2026", status: "Present", timeIn: "08:55 AM" },
+  { date: "May 07, 2026", status: "Late", timeIn: "09:15 AM" },
+  { date: "May 04, 2026", status: "Absent", timeIn: "--" },
 ];
 
 export default function StudentSummary() {
   const navigate = useNavigate();
   const location = useLocation();
-  const [userName, setUserName] = useState("Student");
+  const [userName, setUserName] = useState("Ashley Fe");
 
   useEffect(() => {
     async function fetchUser() {
@@ -194,22 +194,22 @@ export default function StudentSummary() {
           
           <div className="space-y-4 relative">
              <ScheduleItem 
-               initial="S" 
-               title="Science Lecture" 
-               time="08:00 AM - 09:30 AM" 
+               initial="O" 
+               title="OM334 Project Management" 
+               time="09:00 AM - 10:30 AM" 
                color="bg-teal-600" 
                borderColor="border-teal-600"
              />
              <ScheduleItem 
-               initial="M" 
-               title="Mathematics" 
-               time="10:00 AM - 11:30 AM" 
+               initial="L" 
+               title="Library Study" 
+               time="11:00 AM - 12:00 PM" 
                color="bg-yellow-500" 
                borderColor="border-yellow-500"
              />
              <ScheduleItem 
-               initial="H" 
-               title="History Seminar" 
+               initial="G" 
+               title="Group Project Meeting" 
                time="01:00 PM - 02:30 PM" 
                color="bg-red-500" 
                borderColor="border-red-500"
